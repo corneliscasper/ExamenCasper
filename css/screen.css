@@ -79,7 +79,7 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F6F5F7;
 }
 
 *,
@@ -548,6 +548,7 @@ input:disabled {
     border-top: var(--global-whitespace-sm) solid var(--global-color-alpha);
     padding-left: 2rem;
     margin-left: auto;
+    background-color: white;
     margin-right: auto;
     padding-right: 2rem;
     padding-top: 2.5rem;
@@ -820,7 +821,7 @@ input:disabled {
     }
 }
 
-@media()
+
 
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in mobile first design
@@ -839,8 +840,51 @@ No media query since this is the default in mobile first design
 */
 
 /* Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+
 */
+
+@media (min-width: 1200px) {
+
+    .o-layout{
+        max-width: 32rem;
+        margin-top: 32px;
+        max-height: 800px;
+    }
+    .c-custom-line{
+        display: block;
+        
+        height: 0.5rem;
+        width: 18rem;
+        margin-right: 32px;
+        background-color: var(--custom-option-background);
+        border-radius: 32px;
+        border: 1px solid var(--toggle-borderColor);
+        transition: var(--toggle-transition);
+        box-shadow: var(--toggle-boxShadow, 0);
+    }
+    
+    .c-custom-line-purple{
+        display: block;
+        position: absolute;
+        height: 0.5rem;
+        width: 12rem;
+        margin-right: 16px;
+        background-color: var(--global-color-alpha);
+        border-radius: 32px;
+        border: 1px solid var(--toggle-borderColor);
+        transition: var(--toggle-transition);
+        box-shadow: var(--toggle-boxShadow, 0);
+    }
+    .c-card-footer{
+        border-top: var(--global-borderWidth) solid var(--card__footer-borderColor, var(--global-color-neutral-xxx-light));
+        display: grid;
+        grid-template-columns: 22em 1fr;
+        align-items: center;
+        justify-items: normal;
+        /*width: 25.875rem;*/
+        width: 100%;
+    }
+}
 
 /*
     Print styles.
