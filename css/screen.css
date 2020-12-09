@@ -27,8 +27,10 @@
     --custom-option-background:#c8c6cc;
     --global-color-alpha-light: #1AB6FF;
     --global-color-alpha: #4E00EA;
+    
     --global-color-alpha-dark: #2E77E6;
     --global-color-p:#47454D;
+    --global-color-neutral-xxx-light: #E2E3E7;
     --global-color-neutral-xx-light: #FFFFFF;
     --global-color-neutral-x-light: #A2A1A6;
     --global-color-neutral-light: #616466;
@@ -43,6 +45,7 @@
     --global-input-border: 1px solid #DCDAE0;
     --custom-option-border-checked: 2px solid var(--global-color-alpha);
     --custom-option-border: 2px solid var(--global-color-neutral-x-light);
+    --global-borderWidth: 1px;
 
     /* baseline */
     --global-baseline: 0.5rem; /* = 8px */
@@ -374,11 +377,22 @@ input:disabled {
 
 .send-back{
     display: grid;
-    grid-template-columns: 50% 50%;
+    align-items: center;
+    grid-template-columns: 1fr 13rem;
 }
 
 .c-option-list {
     margin-bottom: var(--global-whitespace-lg);
+}
+
+.c-card-footer{
+    border-top: var(--global-borderWidth) solid var(--card__footer-borderColor, var(--global-color-neutral-xxx-light));
+    display: grid;
+    grid-template-columns: 15.625rem 1fr;
+    align-items: center;
+    justify-items: normal;
+    /*width: 25.875rem;*/
+    width: 100%;
 }
 
 .c-form-field {
@@ -511,7 +525,7 @@ input:disabled {
     background-color: var(--global-color-alpha);
     color: var(--global-color-neutral-xx-light);
     padding: 1rem;
-    width: 100%;
+    width: 13rem;
     outline: none;
 }
 
@@ -539,6 +553,32 @@ input:disabled {
     width: 61px;
     margin-right: 16px;
     background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+
+.c-custom-line{
+    display: block;
+    
+    height: 0.5rem;
+    width: 13rem;
+    margin-right: 16px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+
+.c-custom-line-purple{
+    display: block;
+    position: absolute;
+    height: 0.5rem;
+    width: 9rem;
+    margin-right: 16px;
+    background-color: var(--global-color-alpha);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -666,6 +706,12 @@ input:disabled {
     These examples override the primary ('mobile first') styles.
     USE THEM INLINE!
 */
+@media (prefers-color-scheme: dark) {
+    .c-card {
+        --card-backgroundColor: var(--global-color-neutral-xxx-dark);
+        --card__footer-borderColor: var(--global-color-neutral-xxxx-dark);
+    }
+}
 
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in mobile first design
@@ -693,6 +739,7 @@ No media query since this is the default in mobile first design
     Inlined to avoid the additional HTTP request:
     http://www.phpied.com/delay-loading-your-print-css/
 */
+
 
 @media print {
     *,
