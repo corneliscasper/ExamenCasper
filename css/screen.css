@@ -551,6 +551,7 @@ input:disabled {
     display: block;
     height: 32px;
     width: 61px;
+    
     margin-right: 16px;
     background-color: var(--custom-option-background);
     border-radius: 32px;
@@ -589,8 +590,8 @@ input:disabled {
     font-weight: 800;
     color:var(--global-color-neutral);
 }
-.items1{
-    
+.items{
+    position: absolute;
     
 }
 /*------------------------------------*\
