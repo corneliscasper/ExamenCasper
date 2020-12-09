@@ -552,13 +552,111 @@ input:disabled {
     height: 32px;
     width: 61px;
     
-    margin-right: 16px;
+    margin-right: 12px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+    
+}
+.c-custom-toggle__fake-input1 {
+    display: block;
+    height: 32px;
+    width: 72px;
+    
+    margin-right: 12px;
     background-color: var(--custom-option-background);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
     box-shadow: var(--toggle-boxShadow, 0);
 }
+.c-custom-toggle__fake-input2 {
+    display: block;
+    height: 32px;
+    width: 101px;
+    
+    margin-right: 12px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+.c-custom-toggle__fake-input3 {
+    display: block;
+    height: 32px;
+    width: 79px;
+    
+    margin-right: 12px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+.c-custom-toggle__fake-input4 {
+    display: block;
+    height: 32px;
+    width: 67px;
+    
+    margin-right: 12px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+.c-custom-toggle__fake-input5 {
+    display: block;
+    height: 32px;
+    width: 81px;
+    
+    margin-right: 12px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+.c-custom-toggle__fake-input6 {
+    display: block;
+    height: 32px;
+    width: 49px;
+    
+    margin-right: 12px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+.c-custom-toggle__fake-input7 {
+    display: block;
+    height: 32px;
+    width: 84px;
+    
+    margin-right: 12px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+.c-custom-toggle__fake-input8 {
+    display: block;
+    height: 32px;
+    width: 83px;
+    
+    margin-right: 12px;
+    background-color: var(--custom-option-background);
+    border-radius: 32px;
+    border: 1px solid var(--toggle-borderColor);
+    transition: var(--toggle-transition);
+    box-shadow: var(--toggle-boxShadow, 0);
+}
+
 
 .c-custom-line{
     display: block;
@@ -592,6 +690,7 @@ input:disabled {
 }
 .items{
     position: absolute;
+    
     
 }
 /*------------------------------------*\
