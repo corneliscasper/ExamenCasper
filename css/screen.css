@@ -25,17 +25,20 @@
 :root {
     --global-page-backgroundcolor: linear-gradient(to bottom right, var(--global-color-alpha), var(--global-color-alpha-light));
     --custom-option-background:#c8c6cc;
+    --custom-option-background-checkbox:#DCDAE0;
     --global-color-alpha-light: #1AB6FF;
     --global-color-alpha: #4E00EA;
     
     --global-color-alpha-dark: #2E77E6;
     --global-color-p:#47454D;
+    --global-color-checkbox-p:#47454D;
     --global-color-neutral-xxx-light: #E2E3E7;
     --global-color-neutral-xx-light: #FFFFFF;
     --global-color-neutral-x-light: #A2A1A6;
     --global-color-neutral-light: #616466;
     --global-color-neutral-dark: #1B1918;
     --global-color-neutral: #17161A;
+    
 
     /* shadows */
     --global-card-boxShadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
@@ -484,11 +487,14 @@ input:disabled {
 
 .c-option--hidden:checked + .c-custom-option .c-custom-option__fake-input {
     --custom-option-background: var(--global-color-alpha);
+    
     --custom-option-border: var(--custom-option-border-checked);
 }
 
 .c-option--hidden:checked + .c-custom-toggle{
-    --custom-option-background:var(--global-color-alpha);
+    --global-color-checkbox-p:white;
+    --custom-option-background-checkbox:var(--global-color-alpha);
+
 }
 
 .c-option-list__item {
@@ -551,9 +557,7 @@ input:disabled {
     display: block;
     height: 32px;
     width: 61px;
-    
-    margin-right: 12px;
-    background-color: var(--custom-option-background);
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -565,8 +569,8 @@ input:disabled {
     height: 32px;
     width: 72px;
     
-    margin-right: 12px;
-    background-color: var(--custom-option-background);
+    
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -577,8 +581,8 @@ input:disabled {
     height: 32px;
     width: 101px;
     
-    margin-right: 12px;
-    background-color: var(--custom-option-background);
+    
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -590,7 +594,7 @@ input:disabled {
     width: 79px;
     
     margin-right: 12px;
-    background-color: var(--custom-option-background);
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -602,7 +606,7 @@ input:disabled {
     width: 67px;
     
     margin-right: 12px;
-    background-color: var(--custom-option-background);
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -614,7 +618,7 @@ input:disabled {
     width: 81px;
     
     margin-right: 12px;
-    background-color: var(--custom-option-background);
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -623,10 +627,10 @@ input:disabled {
 .c-custom-toggle__fake-input6 {
     display: block;
     height: 32px;
-    width: 49px;
+    width: 63px;
     
-    margin-right: 12px;
-    background-color: var(--custom-option-background);
+    
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -637,8 +641,8 @@ input:disabled {
     height: 32px;
     width: 84px;
     
-    margin-right: 12px;
-    background-color: var(--custom-option-background);
+    
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -649,8 +653,8 @@ input:disabled {
     height: 32px;
     width: 83px;
     
-    margin-right: 12px;
-    background-color: var(--custom-option-background);
+   
+    background-color: var(--custom-option-background-checkbox);
     border-radius: 32px;
     border: 1px solid var(--toggle-borderColor);
     transition: var(--toggle-transition);
@@ -689,7 +693,10 @@ input:disabled {
     color:var(--global-color-neutral);
 }
 .items{
+    padding-left: 0.75rem;
+    padding-top: 0.28rem;
     position: absolute;
+    color: var(--global-color-checkbox-p);
     
     
 }
@@ -812,6 +819,8 @@ input:disabled {
         --card__footer-borderColor: var(--global-color-neutral-xxxx-dark);
     }
 }
+
+@media()
 
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in mobile first design
